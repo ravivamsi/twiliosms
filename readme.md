@@ -27,7 +27,8 @@ Endpoint: http://localhost:8080/sms/send
 	"accountsid": "<accountsid>",
 	"authtoken": "<authtoken>",
 	"from": "+18572565048",
-	"to": "+18572056865"
+	"to": "+18572056865",
+	"message": "The actual message goes here"
 }
 ```
 
