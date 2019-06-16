@@ -28,10 +28,11 @@ public class SendSMS {
 		String AUTH_TOKEN = (String) customer.get("authtoken");
 		String FROM_PHONE = (String) customer.get("from");
 		String TO_PHONE = (String) customer.get("to");
+		String MESSAGE_TO_SEND = (String) customer.get("message");
 
 		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 		Message message = Message.creator(new com.twilio.type.PhoneNumber(TO_PHONE),
-				new com.twilio.type.PhoneNumber(FROM_PHONE), "This is a message to send Request Date").create();
+				new com.twilio.type.PhoneNumber(FROM_PHONE), MESSAGE_TO_SEND).create();
 
 		return ResponseEntity.ok().body(message.getSid());
 
