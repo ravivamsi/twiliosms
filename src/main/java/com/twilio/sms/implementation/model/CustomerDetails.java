@@ -8,7 +8,5 @@ package com.twilio.sms.implementation.model;
  *
  */
 public class CustomerDetails {
-	
-	
 
 }
